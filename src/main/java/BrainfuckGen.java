@@ -40,21 +40,18 @@ public class BrainfuckGen {
       bf_MoveHead(lrSteps);
 
       currentCellIdx = bestIdx;
-
-      int steps = charValue - currentCell[bestIdx];
-
+      int steps = charValue - currentCell[currentCellIdx];
       bf_ChangeValue(steps);
+      bf_PrintCurrentCell();
 
-      bf_PrintCurrentCell(".");
+      currentCell[currentCellIdx] += steps;
 
-      currentCell[bestIdx] += steps;
-
-      System.out.println("Char " + (char)charValue + " " + bestIdx + " " + lrSteps + " " + steps + " " + charValue);
+     // System.out.println("Char " + (char)charValue + " " + bestIdx + " " + lrSteps + " " + steps + " " + charValue);
     }
   }
 
-  private static void bf_PrintCurrentCell(String s) {
-    System.out.println(s);
+  private static void bf_PrintCurrentCell() {
+    System.out.println(".");
   }
 
   private static void bf_ChangeValue(int steps) {

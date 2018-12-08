@@ -1,7 +1,5 @@
 package de.skerkewitz.brainfuck;
 
-import de.skerkewitz.brainfuck.BrainfuckSink;
-
 public class BrainfuckGen {
 
   /**
